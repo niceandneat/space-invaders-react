@@ -31,10 +31,10 @@ pipeline {
             remote.user = userName
             remote.identityFile = identity
           }
-          sshCommand remote: remote, command: 'mkdir -p $DIST_PATH/temp'
-          sshPut remote: remote, from: 'dist', into: '$DIST_PATH/temp'
-          sshCommand remote: remote, command: 'rm -rf $DIST_PATH/$PRJECT_NAME && mv $DIST_PATH/temp/dist $DIST_PATH/$PRJECT_NAME'
-          sshCommand remote: remote, command: 'rm -rf $DIST_PATH/temp'
+          sshCommand remote: remote, command: "mkdir -p $DIST_PATH/temp"
+          sshPut remote: remote, from: 'dist', into: "$DIST_PATH/temp"
+          sshCommand remote: remote, command: "rm -rf $DIST_PATH/$PRJECT_NAME && mv $DIST_PATH/temp/dist $DIST_PATH/$PRJECT_NAME"
+          sshCommand remote: remote, command: "rm -rf $DIST_PATH/temp"
         }
       }
     }
