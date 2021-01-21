@@ -13,6 +13,7 @@ pipeline {
 
   environment {
     CI = 'true'
+    PUBLIC_PATH = '/projects/'
     DIST_PATH = '/home/ubuntu/projects/niceandneat.dev/dist/projects'
     PRJECT_NAME = 'space-invaders'
   }
