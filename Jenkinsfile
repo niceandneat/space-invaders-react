@@ -7,7 +7,7 @@ remote.allowAnyHosts = true
 pipeline {
   agent {
     docker {
-      image 'node'
+      image 'node:lts'
     }
   }
 
