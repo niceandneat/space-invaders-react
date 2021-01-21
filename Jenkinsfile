@@ -26,7 +26,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        withCredentials([sshUserPrivateKey(credentialsId: 'pc-rsa', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+        withCredentials([sshUserPrivateKey(credentialsId: 'lightsail-rsa', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
           script {
             remote.user = userName
             remote.identityFile = identity
