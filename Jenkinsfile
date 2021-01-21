@@ -1,6 +1,6 @@
 // Reference https://issues.jenkins.io/browse/JENKINS-57269
 def remote = [:]
-remote.name = 'ubuntu'
+remote.name = 'web'
 remote.host = '13.125.62.25'
 remote.allowAnyHosts = true
 
@@ -13,7 +13,7 @@ pipeline {
 
   environment {
     CI = 'true'
-    DIST_PATH = '/home/nubuntu/projects/niceandneat.dev/dist/projects'
+    DIST_PATH = '/home/ubuntu/projects/niceandneat.dev/dist/projects'
     PRJECT_NAME = 'space-invaders'
   }
 
