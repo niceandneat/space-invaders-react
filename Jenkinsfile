@@ -1,6 +1,6 @@
 // Reference https://issues.jenkins.io/browse/JENKINS-57269
 def remote = [:]
-remote.name = 'web'
+remote.name = 'ubuntu'
 remote.host = '13.125.62.25'
 remote.allowAnyHosts = true
 
@@ -21,6 +21,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'npm ci'
+        sh 'npm run build'
       }
     }
     stage('Deploy') {
