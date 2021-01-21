@@ -1,0 +1,12 @@
+.blocks__container {
+  position: absolute;
+}
+
+.block__container {
+  display: block;
+  position: absolute;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

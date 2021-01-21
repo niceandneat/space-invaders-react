@@ -1,0 +1,16 @@
+.message__container {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  background-color: #000000;
+}
+
+.message__line {
+  width: 100%;
+  text-align: center;
+  color: #000000;
+}
+
+.message__item--show {
+  color: #ffffff;
+}

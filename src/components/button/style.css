@@ -1,0 +1,27 @@
+.button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  background-color: black;
+  border: 0;
+}
+
+.button__container {
+  flex: 1 1 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-touch-callout: none;
+}
+
+.button--fire-horizontal {
+  width: 50%;
+}
