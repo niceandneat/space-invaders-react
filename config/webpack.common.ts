@@ -9,6 +9,7 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 const jsDist = 'js';
 const cssDist = 'css';
 
+const CI = !!process.env.CI;
 const devMode = process.env.NODE_ENV !== 'production';
 const publicPath = devMode ? '/' : process.env.PUBLIC_PATH ?? '/';
 const fromCurrTo = (p: string) => path.resolve(__dirname, p);
@@ -58,7 +59,7 @@ const config: webpack.Configuration = {
   },
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({ analyzerMode: CI ? 'disabled' : 'server' }),
     new MiniCssExtractPlugin({
       filename: devMode
         ? `${cssDist}/[name].css`
