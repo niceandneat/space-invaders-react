@@ -23,6 +23,7 @@
     "redux": "^4.0.5"
   },
   "devDependencies": {
+    "@types/copy-webpack-plugin": "^6.4.0",
     "@types/css-minimizer-webpack-plugin": "^1.1.1",
     "@types/html-webpack-plugin": "^3.2.4",
     "@types/mini-css-extract-plugin": "^1.2.2",
@@ -34,6 +35,7 @@
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^7.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
     "css-minimizer-webpack-plugin": "^1.2.0",

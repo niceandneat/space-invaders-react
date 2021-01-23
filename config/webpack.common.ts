@@ -3,6 +3,7 @@ import * as path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
@@ -72,6 +73,15 @@ const config: webpack.Configuration = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: fromCurrTo('../src/index.html'),
+    }),
+    new CopyPlugin({
+      patterns: [
+        // Copy a default og image
+        {
+          from: fromCurrTo('../src/images/main.png'),
+          to: 'images/[name].[ext]',
+        },
+      ],
     }),
   ],
   module: {
